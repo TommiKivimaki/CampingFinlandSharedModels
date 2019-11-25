@@ -1,3 +1,3 @@
 # CampingFinlandSharedModels
 
-A description of this package.
+Shared models between iOS and Bedrock apps. 
