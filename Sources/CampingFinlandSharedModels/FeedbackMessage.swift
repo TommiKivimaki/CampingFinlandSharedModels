@@ -12,9 +12,9 @@ public final class FeedbackMessage: Codable {
   public var message: String
   public var email: String?
   
-  public init(id: Int?, text: String, email: String?) {
+  public init(id: Int?, message: String, email: String? = nil) {
     self.id = id
-    self.message = text
+    self.message = message
     self.email = email
   }
 }
