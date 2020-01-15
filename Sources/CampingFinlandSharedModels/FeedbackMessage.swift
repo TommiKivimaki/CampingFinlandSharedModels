@@ -9,11 +9,13 @@ import Foundation
 
 public final class FeedbackMessage: Codable {
   public var id: Int?
+  public var appName: String
   public var message: String
   public var email: String?
   
-  public init(id: Int? = nil, message: String, email: String? = nil) {
+  public init(id: Int? = nil, appName: String, message: String, email: String? = nil) {
     self.id = id
+    self.appName = appName
     self.message = message
     self.email = email
   }

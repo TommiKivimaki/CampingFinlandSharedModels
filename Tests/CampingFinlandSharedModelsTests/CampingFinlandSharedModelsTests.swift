@@ -3,18 +3,22 @@ import XCTest
 
 final class CampingFinlandSharedModelsTests: XCTestCase {
   func testFeedbackMessage() {
-    let message = FeedbackMessage(id: 1, text: "testi", email: "tommi@caravanstudio.fi")
+    let message = FeedbackMessage(id: 1, appName: "XCode", message: "test", email: "tommi@caravanstudio.fi")
     XCTAssertEqual(message.id, 1)
-    XCTAssertEqual(message.message, "testi")
+    XCTAssertEqual(message.message, "test")
     XCTAssertEqual(message.email, "tommi@caravanstudio.fi")
-    
-    let anotherMessage = FeedbackMessage(id: nil, text: "testi2", email: nil)
+  }
+  
+  func testFeedbackMessageWithNils() {
+    let anotherMessage = FeedbackMessage(id: nil, appName: "XCode", message: "test 2", email: nil)
     XCTAssertNil(anotherMessage.id)
-    XCTAssertEqual(anotherMessage.message, "testi2")
+    XCTAssertEqual(anotherMessage.appName, "XCode")
+    XCTAssertEqual(anotherMessage.message, "test 2")
     XCTAssertNil(anotherMessage.email)
   }
   
   static var allTests = [
     ("testFeedbackMessage", testFeedbackMessage),
+    ("testFeedbackMessageWithNils", testFeedbackMessageWithNils)
   ]
 }
