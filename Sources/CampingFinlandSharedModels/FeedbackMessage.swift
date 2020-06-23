@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Feedback message form an app supporting Codable
 public final class FeedbackMessage: Codable {
   public var id: Int?
   public var appName: String
